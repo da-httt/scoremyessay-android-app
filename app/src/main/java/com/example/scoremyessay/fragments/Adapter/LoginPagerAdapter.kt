@@ -1,4 +1,4 @@
-package com.example.scoremyessay.Fragments
+package com.example.scoremyessay.fragments.Adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

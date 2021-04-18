@@ -15,15 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ScoreMyEssay">
-        <activity android:name=".ActivityIntroSlider">
+        <activity android:name=".ActivityTest">
+
+        </activity>
+        <activity android:name=".ActivityIntroSlider"></activity>
+        <activity android:name=".ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ActivityLogin">
-
         </activity>
         <activity android:name=".MainActivity"></activity>
     </application>

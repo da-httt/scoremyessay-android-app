@@ -34,10 +34,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/indicatorsContainers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
+        android:paddingTop="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/btnNext" />
@@ -46,9 +47,10 @@
         android:id="@+id/introSliderViewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/indicatorsContainers"
         app:layout_constraintTop_toTopOf="parent"
-        android:overScrollMode="never"/>
+        android:overScrollMode="never"
+        android:layout_marginBottom="10dp"/>
 
 
 

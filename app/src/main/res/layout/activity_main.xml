@@ -9,30 +9,6 @@
     android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="179dp"
-        android:layout_height="109dp"
-        android:background="@android:drawable/alert_dark_frame"
-        app:srcCompat="@drawable/mascot"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="109dp" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="245dp"
-        android:layout_height="113dp"
-        android:paddingTop="100dp"
-        app:srcCompat="@drawable/mascot"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="400dp" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ToggleButton"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="44dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
