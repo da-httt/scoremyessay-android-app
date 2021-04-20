@@ -31,7 +31,7 @@
         android:background="@drawable/edt_bg"
         android:ems="10"
         android:hint="Mật khẩu"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textPassword"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"

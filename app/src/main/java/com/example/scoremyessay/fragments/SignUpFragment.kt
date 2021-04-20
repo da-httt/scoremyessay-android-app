@@ -65,11 +65,7 @@ class SignUpFragment : Fragment() {
                         cal.get(Calendar.MONTH),
                         cal.get(Calendar.DAY_OF_MONTH)).show()
 
-            }
-        })
-
-
-
+            }})
 
         // Inflate the layout for this fragment
         return view

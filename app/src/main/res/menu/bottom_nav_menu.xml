@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mnuHome"
+        android:title="Trang chủ"
+        android:icon="@drawable/menu_home"/>
+    <item android:id="@+id/mnuEssay"
+        android:title="Bài viết"
+        android:icon="@drawable/menu_note"/>
+    <item android:id="@+id/placeHolder"
+        android:title=""/>
+    <item android:id="@+id/mnuShoppingCart"
+        android:title="Giở hàng"
+        android:icon="@drawable/menu_shopping_cart"/>
+    <item android:id="@+id/mnuPerson"
+        android:title="Hồ sơ"
+        android:icon="@drawable/menu_person"/>
+</menu>

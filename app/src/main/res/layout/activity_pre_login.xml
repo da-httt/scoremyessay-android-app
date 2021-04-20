@@ -6,33 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ActivityLogin">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="233dp"
-        android:layout_height="348dp"
-        app:srcCompat="@drawable/mascot"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="152dp" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/cloud_talk"
-        android:text="TextViewd"
-        android:textColor="@color/black"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="167dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="82dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

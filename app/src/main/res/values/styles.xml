@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
-    <style name="roundImage">
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="roundImage" >
         <item name="cornerSizeBottomLeft">20dp</item>
         <item name="cornerSizeBottomRight">20dp</item>
         <item name="color">@color/white</item>
@@ -11,4 +15,5 @@
         <item name="android:textSize">35sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
 </resources>

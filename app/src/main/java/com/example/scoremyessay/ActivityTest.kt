@@ -24,7 +24,6 @@ class ActivityTest : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        textDate = binding.textDate
 
         cal = Calendar.getInstance()
 
