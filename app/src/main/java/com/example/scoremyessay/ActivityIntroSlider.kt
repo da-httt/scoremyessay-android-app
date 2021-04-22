@@ -1,18 +1,15 @@
 package com.example.scoremyessay
 
-import android.icu.text.CaseMap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.scoremyessay.IntroSlider.IntroSliderAdapter
-import com.example.scoremyessay.Model.IntroSliderModel
+import com.example.scoremyessay.model.IntroSliderModel
 import com.example.scoremyessay.databinding.ActivityIntroSliderBinding
-import com.example.scoremyessay.databinding.ActivityLoginBinding
 
 class ActivityIntroSlider : AppCompatActivity() {
     private var _binding: ActivityIntroSliderBinding?= null

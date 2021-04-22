@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.scoremyessay.ActivityIntroSlider
-import com.example.scoremyessay.Model.IntroSliderModel
+import com.example.scoremyessay.model.IntroSliderModel
 import com.example.scoremyessay.R
 import com.example.scoremyessay.databinding.SlideItemContainerBinding
 

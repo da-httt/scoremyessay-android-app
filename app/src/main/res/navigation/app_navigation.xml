@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/actionHome">
+
+    <fragment
+        android:id="@+id/actionHome"
+        android:name="com.example.scoremyessay.fragments.HomeFragment"
+        android:label="Trang chủ"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/actionCart"
+        android:name="com.example.scoremyessay.fragments.CartFragment"
+        android:label="Giở hàng"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/actionEssay"
+        android:name="com.example.scoremyessay.fragments.EssayFragment"
+        android:label="Bài viết của tôi"
+        tools:layout="@layout/fragment_essay" />
+    <fragment
+        android:id="@+id/actionCreateEssay"
+        android:name="com.example.scoremyessay.fragments.CreateEssayFragment"
+        android:label="fragment_create_essay"
+        tools:layout="@layout/fragment_create_essay" />
+    <fragment
+        android:id="@+id/actionMe"
+        android:name="com.example.scoremyessay.fragments.MeFragment"
+        android:label="Hồ sơ" />
+</navigation>
