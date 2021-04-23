@@ -21,23 +21,24 @@ import retrofit2.http.POST
 
 object RetrofiClient {
 
-    const val MainServer = "192.168.0.87:8000"
+    const val MainServer = "https://e55064f1751b.ngrok.io/"
     val service: AppRepository by lazy {
         val logging = HttpLoggingInterceptor()
-        val gson = GsonBuilder().serializeNulls().setPrettyPrinting().create()
+//        val gson = GsonBuilder().serializeNulls().setPrettyPrinting().create()
         val client = OkHttpClient.Builder()
             .addInterceptor(logging)
             .build()
         Retrofit.Builder()
             .baseUrl(MainServer)
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) //(*)
-            .client(client)
-            .build().create<AppRepository>(AppRepository::class.java)
+            .addConverterFactory(GsonConverterFactory.create())
+//            .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) //(*)
+//            .client(client)
+            .build().create(AppRepository::class.java)
     }
     interface AppRepository {
-        @FormUrlEncoded
-        @POST("auth")
+//        @FormUrlEncoded
+        @POST("login")
+//        fun loginUser(@Field("username")username: String, @Field("password") password: String) : Call<LoginResponse>
         fun loginUser(@Body request: LoginRequest) : Call<LoginResponse>
     }
 }

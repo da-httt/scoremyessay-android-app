@@ -49,10 +49,10 @@ class LoginFragment : Fragment() {
         sessionManager = SessionManager(loginActivity)
 
         binding?.btnLogin?.setOnClickListener{
-            RetrofiClient.service.loginUser(LoginRequest(binding?.edtUsername?.text!!.toString(), binding?.edtPassword?.text!!.toString()) )
+            RetrofiClient.service.loginUser(LoginRequest("admin@scoremyessay.com","admin") )
                 .enqueue(object : retrofit2.Callback<LoginResponse>{
                     override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-
+                        Log.e("Loi2",t.printStackTrace().toString())
                     }
 
                     override fun onResponse(
@@ -60,11 +60,16 @@ class LoginFragment : Fragment() {
                         response: Response<LoginResponse>
                     ) {
                         val loginResponse = response.body()
+                        Log.e("status", response.code().toString())
+                        Log.e("url", response.raw().request().url().toString())
+                        if (response.code() == 200) {
+                            sessionManager.saveAuthToken(loginResponse!!.authToken)
 
-                        if (loginResponse?.statusCode == 200 && loginResponse.user != null) {
-                            sessionManager.saveAuthToken(loginResponse.authToken)
                             Log.e("Login.token:",loginResponse.authToken)
+
                         } else {
+                            Log.e("Loi1","1")
+                            Log.e("Loi1",response.errorBody().toString())
                             // Error logging in
                         }
                     }

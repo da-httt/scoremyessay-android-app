@@ -3,12 +3,11 @@ package com.example.scoremyessay.model
 import com.google.gson.annotations.SerializedName
 
 data class LoginResponse(
-    @SerializedName("status_code")
-    var statusCode: Int,
 
-    @SerializedName("auth_token")
+
+    @SerializedName("access_token")
     var authToken: String,
 
-    @SerializedName("user")
-    var user: LoginRequest
+    @SerializedName("token_type")
+    var token_type: String
 )
