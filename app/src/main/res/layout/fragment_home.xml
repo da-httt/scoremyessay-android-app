@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".ui.main.view.fragments.HomeFragment"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
@@ -23,8 +24,10 @@
         android:id="@+id/carView1"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        style="@style/cardView_custom"
         app:layout_constraintTop_toBottomOf="@id/imgLogo"
-        android:layout_marginLeft="30dp">
+        android:layout_marginHorizontal="30dp"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -103,7 +106,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/carView1"
-        android:layout_marginLeft="30dp">
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        style="@style/cardView_custom"
+        app:cardElevation="0dp"
+        android:elevation="0dp"
+        android:translationZ="0dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

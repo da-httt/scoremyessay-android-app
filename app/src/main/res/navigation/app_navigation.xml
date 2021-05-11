@@ -7,26 +7,40 @@
 
     <fragment
         android:id="@+id/actionHome"
-        android:name="com.example.scoremyessay.fragments.HomeFragment"
+        android:name="com.example.scoreMyEssay.ui.main.view.fragments.HomeFragment"
         android:label="Trang chủ"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_actionHome_to_actionCreateEssay"
+            app:destination="@id/actionCreateEssay" />
+    </fragment>
     <fragment
         android:id="@+id/actionCart"
-        android:name="com.example.scoremyessay.fragments.CartFragment"
-        android:label="Giở hàng"
+        android:name="com.example.scoreMyEssay.ui.main.view.fragments.CartFragment"
+        android:label="Giỏ hàng"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/actionEssay"
-        android:name="com.example.scoremyessay.fragments.EssayFragment"
+        android:name="com.example.scoreMyEssay.ui.main.view.fragments.EssayFragment"
         android:label="Bài viết của tôi"
         tools:layout="@layout/fragment_essay" />
     <fragment
         android:id="@+id/actionCreateEssay"
-        android:name="com.example.scoremyessay.fragments.CreateEssayFragment"
-        android:label="fragment_create_essay"
+        android:name="com.example.scoreMyEssay.ui.main.view.fragments.CreateEssayFragment"
+        android:label="Thêm bài viết"
         tools:layout="@layout/fragment_create_essay" />
     <fragment
         android:id="@+id/actionMe"
-        android:name="com.example.scoremyessay.fragments.MeFragment"
+        android:name="com.example.scoreMyEssay.ui.main.view.fragments.MeFragment"
         android:label="Hồ sơ" />
+    <fragment
+        android:id="@+id/actionInstruction"
+        android:name="com.example.scoreMyEssay.ui.main.view.fragments.InstructionFragment"
+        android:label="Hướng dẫn"
+        tools:layout="@layout/fragment_instruction" />
+    <fragment
+        android:id="@+id/actionSetting"
+        android:name="com.example.scoreMyEssay.ui.main.view.fragments.SettingFragment"
+        android:label="Cài đặt"
+        tools:layout="@layout/fragment_setting" />
 </navigation>

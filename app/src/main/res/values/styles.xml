@@ -15,5 +15,9 @@
         <item name="android:textSize">35sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="cardView_custom" parent="CardView">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="contentPadding">10dp</item>
+    </style>
 
 </resources>

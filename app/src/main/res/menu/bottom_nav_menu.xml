@@ -4,6 +4,7 @@
         android:title="Trang chủ"
         android:icon="@drawable/menu_home"/>
     <item android:id="@+id/actionEssay"
+        android:checked="true"
         android:title="Bài viết"
         android:icon="@drawable/menu_note"/>
     <item android:id="@+id/placeHolder"

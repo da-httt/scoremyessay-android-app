@@ -17,7 +17,7 @@
     <string name="description_text">Description Text</string>
     <string name="password_input">Mật khẩu</string>
     <string name="btn_login">Đăng nhập</string>
-    <string name="miss_password">Quên mật khẩu</string>
+    <string name="miss_password">Quên mật khẩu ?</string>
     <string name="login_to_signup">Bạn chưa có tài khoản? Hãy đăng ký !</string>
     <string name="login">LOGIN</string>
     <string name="register">REGISTER</string>

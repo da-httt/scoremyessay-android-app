@@ -1,6 +1,7 @@
  plugins {
     id 'com.android.application'
     id 'kotlin-android'
+     id 'kotlin-kapt'
 
 }
 
@@ -9,7 +10,9 @@ android {
     buildToolsVersion "29.0.2"
 
     buildFeatures {
+        dataBinding true
         viewBinding true
+
     }
     defaultConfig {
         applicationId "com.example.scoremyessay"
@@ -34,11 +37,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    allprojects {
+        repositories {
+            jcenter()
+            google()
+        }
+    }
 
 }
 
 dependencies {
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -61,4 +70,12 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.+'
     implementation 'com.squareup.retrofit2:converter-gson:2.+'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.+'
+
+    implementation 'com.google.dagger:dagger-android:2.17'
+    implementation 'com.google.dagger:dagger-android-support:2.17'
+
+
+    kapt 'com.android.databinding:compiler:3.1.2'
+    /* Add Kotlin support */
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.71'
 }
