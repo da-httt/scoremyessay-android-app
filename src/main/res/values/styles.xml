@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="roundImage" >
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="LOGIN_REGISTER_FONT" parent="@style/TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">#00A5FF</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="cardView_custom" parent="CardView">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="contentPadding">10dp</item>
+    </style>
+    <style name="customTabStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">10sp</item>
+    </style>
+</resources>

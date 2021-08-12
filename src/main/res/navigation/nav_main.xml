@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/actionHome">
+
+    <fragment
+        android:id="@+id/actionHome"
+
+        android:name="com.example.scoreMyEssay.ui.fragments.HomeFragment"
+        android:label="Trang chủ"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_actionHome_to_actionCreateEssay"
+            app:destination="@id/actionCreateEssay" />
+        <action
+            android:id="@+id/action_actionHome_to_actionCart"
+            app:destination="@id/actionCart" />
+        <action
+            android:id="@+id/action_actionHome_to_actionEssay2"
+            app:destination="@id/actionEssay" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionCart"
+        android:name="com.example.scoreMyEssay.ui.fragments.CartFragment"
+        android:label="Giỏ hàng"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/actionEssay"
+        android:name="com.example.scoreMyEssay.ui.main.fragment.showEssay.EssayFragment"
+        android:label="Bài viết của tôi"
+        tools:layout="@layout/fragment_view_essay_navi" />
+    <fragment
+        android:id="@+id/actionCreateEssay"
+        android:name="com.example.scoreMyEssay.ui.main.fragment.createOrder.CreateEssayFragment"
+        android:label="Thêm bài viết"
+        tools:layout="@layout/fragment_create_essay_option" >
+        <action
+            android:id="@+id/action_actionCreateEssay_to_enterEssay"
+            app:destination="@id/actionEnterEssay" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionMe"
+        android:name="com.example.scoreMyEssay.ui.fragments.MeFragment"
+        android:label="Hồ sơ" />
+    <fragment
+        android:id="@+id/actionInstruction"
+        android:name="com.example.scoreMyEssay.ui.fragments.InstructionFragment"
+        android:label="Hướng dẫn"
+        tools:layout="@layout/fragment_instruction" />
+    <fragment
+        android:id="@+id/actionSetting"
+        android:name="com.example.scoreMyEssay.ui.fragments.SettingFragment"
+        android:label="Cài đặt"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/actionEnterEssay"
+        android:name="com.example.scoreMyEssay.ui.main.fragment.createOrder.EnterEssay"
+        android:label="Nhập Essay"
+        tools:layout="@layout/fragment_create_essay_enter" >
+        <action
+            android:id="@+id/action_enterEssay_to_createOptions"
+            app:destination="@id/createOptions" />
+    </fragment>
+    <fragment
+        android:id="@+id/createOptions"
+        android:name="com.example.scoreMyEssay.ui.main.fragment.createOrder.InitialOptionsFragment"
+        android:label="fragment_create_order_initial"
+        tools:layout="@layout/fragment_create_order_initial" />
+</navigation>
