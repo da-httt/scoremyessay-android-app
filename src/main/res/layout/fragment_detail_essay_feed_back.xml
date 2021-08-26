@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBD7E0"
+    android:padding="10dp"
+    tools:context=".ui.main.fragment.viewDetail.fragment.FeedBackFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_person" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trần Đình Nam"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:text="Chuyên gia IELTS" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn nghĩ sao về bài đánh giá của tôi ?"
+            android:textColor="@color/blue"  />
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Hãy để lại bình luận và đánh giá để tôi phát triển tốt hơn nhé !"
+            android:textColor="@color/blue" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_star_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_star_white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_star_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_star_white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_star_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_star_white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_star_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_star_white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_star_5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_star_white" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtFeedBack"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:hint="Nhập bình luận của bạn"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:gravity="start"
+            android:padding="5dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSendFeedBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_phan_hoi_button_view_detail"
+            android:padding="5dp"
+            android:text="Gửi phản hồi"
+            android:textColor="@color/purple_200" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

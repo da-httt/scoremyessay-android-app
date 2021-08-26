@@ -10,7 +10,7 @@ import com.example.scoremyessay.data.network.RemoteDataSource
 
 abstract class BaseActivity<VM: ViewModel, B: ViewBinding, R: BaseRepository> :AppCompatActivity() {
     protected lateinit var userPreferences: UserPreferences
-    protected lateinit var binding: B
+    lateinit var binding: B
     lateinit var viewModel: VM
     protected val remoteDataSource = RemoteDataSource()
 

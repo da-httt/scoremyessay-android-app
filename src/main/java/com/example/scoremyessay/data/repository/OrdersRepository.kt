@@ -5,25 +5,54 @@ import com.example.scoremyessay.base.BaseRepository
 import com.example.scoremyessay.data.UserPreferences
 import com.example.scoremyessay.data.model.orderAttribute.level.OrderLevel
 import com.example.scoremyessay.data.model.orderAttribute.option.OrderOption
-import com.example.scoremyessay.data.model.orderAttribute.result.OrderResultAPI
+import com.example.scoremyessay.data.model.orderAttribute.result.rating.OrderRating
 import com.example.scoremyessay.data.model.orderAttribute.status.OrderStatus
 import com.example.scoremyessay.data.model.orderAttribute.type.OrderType
-import com.example.scoremyessay.data.model.orders.OrderItem
-import com.example.scoremyessay.data.model.user.UserInfo
+import com.example.scoremyessay.data.model.orders.OrderRequest
 import com.example.scoremyessay.data.network.iNetwork.IOrderApi
-import com.example.scoremyessay.utils.Resource
 
         class OrdersRepository(private val api: IOrderApi,
                        private val userPreferences: UserPreferences
 ) : BaseRepository(){
 
-    private suspend fun getEssayResultByID(id : Int): OrderResultAPI? {
-        val resourceRemote = safeApiCall { api.getResultByOrderId(id) }
-        if(resourceRemote is Resource.Success)
-        {
-            return resourceRemote.value
-        }
-        return null
+    suspend fun getMyStatistic() = safeApiCall {
+        api.getMyStatistics()
+    }
+
+    suspend fun getAllJobType() = safeApiCall {
+        api.getAllJobType().data
+    }
+
+    suspend fun getMyAccountInformation() = safeApiCall {
+        api.getMyAccountInformation()
+    }
+
+    suspend fun getCreditCard() = safeApiCall {
+        api.getMyCreditCard()
+    }
+
+    suspend fun payOrder(orderID: Int) = safeApiCall {
+        api.payOrder(orderID)
+    }
+
+    suspend fun postOrder(orderRequest: OrderRequest) = safeApiCall {
+        api.postOrders(orderRequest)
+    }
+
+    suspend fun postRatingOrder(orderId: Int, ratingOrder: OrderRating) = safeApiCall {
+        api.postRatingByOrderID(orderId, ratingOrder)
+    }
+
+    suspend fun getOrderRatingAPI(orderID: Int) = safeApiCall {
+        api.getRatingByOrderId(orderID)
+    }
+
+    suspend fun getUserAvatar(userId: Int) = safeApiCall {
+        api.getUserAvatarByUserId(userId)
+    }
+
+    suspend fun getSpellErrorByOrderID(userId: Int) = safeApiCall {
+        api.getSpellErrorOfEssayById(userId)
     }
 
     suspend fun getTeacherInformationByUserID(userId: Int) = safeApiCall {
@@ -56,6 +85,10 @@ import com.example.scoremyessay.utils.Resource
 
     suspend fun getOrderResultById(orderId: Int) = safeApiCall{
         api.getResultByOrderId(orderId)
+    }
+
+    suspend fun getCommentResultById(orderId: Int) = safeApiCall {
+        api.getEssayCommentsByOrderId(orderId)
     }
 
     suspend fun saveOrderStatuses(liOrderStatus: List<OrderStatus>)

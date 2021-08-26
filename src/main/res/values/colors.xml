@@ -10,6 +10,7 @@
     <color name="blue">#0e77a4</color>
     <color name="red">#F00A18</color>
     <color name="grey_light">#A0A3A8</color>
+    <color name="color_DCDCD9">#DCDCD9</color>
 
     <color name="colorPrimaryDark">#586DF1</color>
     <color name="colorPrimary">#FFFEFF</color>
@@ -32,4 +33,8 @@
     <color name="btn_bg_normal">@color/purple_500</color>
     <color name="btn_bg_pressed">@color/purple_200</color>
     <color name="btn_bg_selected">@color/grey_light</color>
+    // Me Fragment
+    <color name="bg_me_fragment">@color/color_DCDCD9</color>
+
+    <color name="yellow">#FBD459</color>
 </resources>

@@ -3,12 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="10dp"
-    app:cardUseCompatPadding="true"
-    app:cardPreventCornerOverlap="true">
+    style="@style/custom_card_view">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +17,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:src="@drawable/ic_essay_done"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -53,14 +48,13 @@
                     android:background="#00000000"/>
             </LinearLayout>
             <TextView
-                android:gravity="right"
                 android:id="@+id/txtGrade"
                 android:layout_marginStart="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="6dp"
                 android:text="Điểm 7.0"
-                android:layout_gravity="center"
+                android:gravity="center"
                 android:textSize="12sp"
                 android:textColor="#24c784"
                 android:background="@drawable/bg_edt_diem"/>
@@ -73,47 +67,48 @@
             android:text="“You are doing great. The main idea is good. I have expressed your opinions and empasize them. However, there are some points you....."
             android:textSize="15sp"
             android:maxLines="3"
+            android:ellipsize="end"
             android:textColor="@color/black"
             android:background="#00000000"
             android:layout_marginTop="10dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:gravity="center">
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Người chấm: "
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:background="#00000000"/>
-            <EditText
-                android:id="@+id/txtNameTeacher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ngô Thị Cảnh"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:background="#00000000"/>
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imgAvatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_person"
-                app:civ_border_width="3dp"
-                app:civ_border_color="@color/black"/>
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:gravity="center">-->
+<!--            <EditText-->
+<!--                android:layout_width="wrap_content"-->
 <!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:layout_gravity="right"-->
-<!--                android:gravity="right"/>-->
+<!--                android:text="Người chấm: "-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:background="#00000000"/>-->
+<!--            <EditText-->
+<!--                android:id="@+id/txtNameTeacher"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Ngô Thị Cảnh"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:background="#00000000"/>-->
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/imgAvatar"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_person"-->
+<!--                app:civ_border_width="3dp"-->
+<!--                app:civ_border_color="@color/black"/>-->
+
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_gravity="right"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:gravity="right"/>&ndash;&gt;-->
 
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
     </LinearLayout>
 

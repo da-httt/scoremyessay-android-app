@@ -8,14 +8,14 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.example.scoremyessay.base.BaseFragment
-import com.example.scoremyessay.base.LoadingDialog
+import com.example.scoremyessay.utils.LoadingDialog
 import com.example.scoremyessay.data.model.*
 
 import com.example.scoremyessay.data.network.iNetwork.IAuthApi
 import com.example.scoremyessay.data.repository.AuthRepository
 
 import com.example.scoremyessay.ui.main.ActivityMain
-import com.example.scoremyessay.ui.viewModel.LoginViewModel
+import com.example.scoremyessay.viewModel.LoginViewModel
 import com.example.scoremyessay.utils.Resource
 import com.example.scoremyessay.databinding.FragmentLoginBinding
 import kotlinx.coroutines.launch
@@ -26,22 +26,42 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding, AuthRep
 //        super.onActivityCreated(savedInstanceState)
 //    }
     private val loadingDialog : LoadingDialog by lazy{ LoadingDialog(requireActivity()) }
-    override fun test() {
-        dangnhaptudong()
+//    override fun test() {
+//        dangnhaptudong()
+//    }
+
+    override fun handleTask() {
+        initObserve()
+        initListener()
     }
 
-    override fun initObserve() {
+    private fun initListener() {
+        binding.btnLogin.setOnClickListener {
+            val loginRequest = LoginRequest(binding.txtUsername.text.toString(),binding.txtPassWord.text.toString())
+//            val loginRequest = LoginRequest("student@gmail.com","student")
+            if(isValidInput(loginRequest))
+            {
+                viewModel.login(loginRequest)
+            }
+        }
+    }
+
+    fun initObserve() {
         viewModel.loginResponse.observe(viewLifecycleOwner, Observer{
             loadingDialog.dismissDialog()
             when(it){
+                is Resource.Loading -> {
+                    loadingDialog.startLoading()
+                }
                 is Resource.Success ->{
                     lifecycleScope.launch{
+                        Log.e("TAG", "initObserve: my token", )
                         viewModel.saveToken(it.value.authToken)
                         startActivity(Intent(requireActivity(), ActivityMain::class.java))
                         requireActivity().finish()
                         Toast.makeText(requireContext(), "Đăng nhập thành công", Toast.LENGTH_LONG).show()
                     }
-
+                    loadingDialog.dismissDialog()
                 }
                 is Resource.Failure ->{
                     when(it.isNetworkError){
@@ -54,6 +74,7 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding, AuthRep
                             }
                         }
                     }
+                    loadingDialog.dismissDialog()
                 }
             }
         })
@@ -72,7 +93,8 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding, AuthRep
 //        }
     }
 
-    fun dangnhaptudong(){
+    private fun dangnhaptudong(){
+
         val loginRequest = LoginRequest("student@gmail.com","student")
         if(isValidInput(loginRequest))
         {
@@ -111,9 +133,11 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding, AuthRep
 
     override fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?) = FragmentLoginBinding.inflate(inflater, container, false)
     override fun getFragmentRepository() = AuthRepository(remoteDataSource.buildApi(IAuthApi::class.java), userPreferences)
-    override fun doingTask() {
-
+    override fun onStop() {
+        super.onStop()
     }
+
+
 //    private var _binding: FragmentLoginBinding? = null
 //    private val binding get() = _binding
 //    private lateinit var loginActivity: ActivityLogin

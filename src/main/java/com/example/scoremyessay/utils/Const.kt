@@ -1,7 +1,7 @@
 package com.example.scoremyessay.utils
 
 object Const {
-    const val BASE_URL = "https://15076acae666.ngrok.io/"
+    const val BASE_URL = "http://c4ef-14-165-106-21.ngrok.io/"
 
     //status
     const val STATUS_SAVED = 0

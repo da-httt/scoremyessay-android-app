@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.fragment.createOrder.CreateEssayFragment">
+    tools:context=".ui.main.fragment.createOrder.EnterEssayFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,12 +12,12 @@
         android:background="@color/blue"
         android:padding="10dp">
 
-
         <com.github.onecode369.wysiwyg.WYSIWYG
             android:id="@+id/editor"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="10"
+            android:layout_marginTop="10dp"
             android:background="@drawable/cur_bg"
             app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,25 +31,23 @@
             android:background="@color/teal_200"
             android:scrollbarSize="0.5dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnComplete"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/btnComplete"
             app:layout_constraintTop_toBottomOf="@+id/editor">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/action_undo"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:padding="15dp"
-                    android:src="@drawable/undo"
                     android:background="@drawable/ic_button_background_total_state"
-                    />
+                    android:padding="15dp"
+                    android:src="@drawable/undo" />
 
                 <ImageView
                     android:id="@+id/action_redo"
@@ -177,7 +175,6 @@
                     android:padding="15dp"
                     android:src="@drawable/txt_color" />
 
-
                 <ImageView
                     android:id="@+id/action_indent"
                     android:layout_width="48dp"
@@ -294,11 +291,12 @@
             android:id="@+id/relativeLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
             android:layout_marginStart="9dp"
             android:layout_marginEnd="9dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3">
+            app:layout_constraintTop_toBottomOf="@+id/btnBack">
 
             <ImageButton
                 android:id="@+id/imageButton"
@@ -334,7 +332,7 @@
         </RelativeLayout>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -358,6 +356,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:drawableRight="@drawable/ic_arrow_right"
+            android:background="@drawable/button_selector"
             android:ems="15"
             android:gravity="center"
             android:paddingLeft="20dp"

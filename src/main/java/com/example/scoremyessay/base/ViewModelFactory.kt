@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.scoremyessay.data.repository.AuthRepository
 import com.example.scoremyessay.data.repository.OrdersRepository
-import com.example.scoremyessay.ui.viewModel.LoginViewModel
-import com.example.scoremyessay.ui.viewModel.MainViewModel
+import com.example.scoremyessay.viewModel.LoginViewModel
+import com.example.scoremyessay.viewModel.MainViewModel
 import java.lang.IllegalArgumentException
 
 @Suppress("UNCHECKED_CAST")

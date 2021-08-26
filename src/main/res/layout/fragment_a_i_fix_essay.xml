@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".ui.main.fragment.viewDetail.fragment.AIFixEssayFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        style="@style/custom_title_view_detail"
+                        android:layout_weight="1"
+                        android:text="Chủ đề" />
+
+                    <TextView
+                        style="@style/custom_title_view_detail"
+                        android:layout_weight="1"
+                        android:text="Tổng số câu" />
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txtChuDe"
+                        style="@style/custom_content_view_detail"
+                        android:layout_weight="1"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/txtNumOfSentence"
+                        style="@style/custom_content_view_detail"
+                        android:layout_weight="1"
+                        android:text="2" />
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        style="@style/custom_title_view_detail"
+                        android:layout_weight="1"
+                        android:text="Chiều dài trung bình mỗi câu" />
+
+                    <TextView
+                        style="@style/custom_title_view_detail"
+                        android:layout_weight="1"
+                        android:text="Tổng số lỗi" />
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txtAverageOfSentence"
+                        style="@style/custom_content_view_detail"
+                        android:layout_weight="1"
+                        android:text="4" />
+
+                    <TextView
+                        android:id="@+id/txtNumError"
+                        style="@style/custom_content_view_detail"
+                        android:layout_weight="1"
+                        android:text="4" />
+                </TableRow>
+            </TableLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_below="@+id/layout1"
+                android:scrollbars="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/layout1" />
+<!--            </androidx.core.widget.NestedScrollView>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Câu sai"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txtErrorSentence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2C2C1"
+            android:text="TextView" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Từ sai"
+                    app:layout_constraintTop_toBottomOf="@+id/txtErrorSentence"
+                    tools:layout_editor_absoluteX="105dp" />
+
+                <TextView
+                    android:id="@+id/txtTuSai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cau 1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtErrorSentence"
+                    tools:layout_editor_absoluteX="105dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Gợi ý sửa"
+                    app:layout_constraintTop_toBottomOf="@+id/txtErrorSentence"
+                    tools:layout_editor_absoluteX="105dp" />
+
+                <TextView
+                    android:id="@+id/txtGoiYSua"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cau 1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtErrorSentence"
+                    tools:layout_editor_absoluteX="105dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

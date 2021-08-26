@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.scoremyessay.ui.viewModel.LoginViewModel" />
+            type="com.example.scoremyessay.viewModel.LoginViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

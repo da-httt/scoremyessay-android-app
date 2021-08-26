@@ -23,19 +23,17 @@ abstract class BaseFragment<VM: ViewModel, B: ViewBinding, R: BaseRepository> : 
         val factory = ViewModelFactory(getFragmentRepository())
         viewModel = ViewModelProvider(this,factory).get(getViewModel() )
 
-        initObserve()
-        test()
-        doingTask()
+//        test()
+        handleTask()
 
         return binding.root
     }
+
     abstract fun getViewModel(): Class<VM>
     abstract fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?) : B
     abstract fun getFragmentRepository() : R
-    abstract fun initObserve()
-    abstract fun doingTask()
-    abstract fun test()
-
+    abstract fun handleTask()
+//    abstract fun test()
 }
 //abstract class BaseFragmentWithViewBinding<B: ViewBinding>: Fragment(){
 //    protected lateinit var binding: B

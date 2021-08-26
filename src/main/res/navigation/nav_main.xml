@@ -7,65 +7,115 @@
 
     <fragment
         android:id="@+id/actionHome"
-
-        android:name="com.example.scoreMyEssay.ui.fragments.HomeFragment"
+        android:name="com.example.scoremyessay.ui.main.fragment.home.HomeFragment"
         android:label="Trang chủ"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_actionHome_to_actionCreateEssay"
-            app:destination="@id/actionCreateEssay" />
+            app:destination="@id/actionCreateEssay"
+            app:enterAnim="@anim/nav_default_enter_anim" />
         <action
             android:id="@+id/action_actionHome_to_actionCart"
             app:destination="@id/actionCart" />
         <action
             android:id="@+id/action_actionHome_to_actionEssay2"
             app:destination="@id/actionEssay" />
+        <action
+            android:id="@+id/action_actionHome_to_meFragment"
+            app:destination="@id/actionMe" />
     </fragment>
     <fragment
         android:id="@+id/actionCart"
-        android:name="com.example.scoreMyEssay.ui.fragments.CartFragment"
+        android:name="com.example.scoremyessay.ui.main.fragment.cart.CartFragment"
         android:label="Giỏ hàng"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_actionCart_to_actionCreateEssay"
+            app:destination="@id/actionCreateEssay" />
+    </fragment>
     <fragment
         android:id="@+id/actionEssay"
-        android:name="com.example.scoreMyEssay.ui.main.fragment.showEssay.EssayFragment"
+        android:name="com.example.scoremyessay.ui.main.fragment.showEssay.EssayFragment"
         android:label="Bài viết của tôi"
-        tools:layout="@layout/fragment_view_essay_navi" />
+        tools:layout="@layout/fragment_view_essay_navi">
+        <action
+            android:id="@+id/action_actionEssay_to_viewDetailFragment"
+            app:destination="@id/viewDetailFragment" />
+        <action
+            android:id="@+id/action_actionEssay_to_actionCreateEssay"
+            app:destination="@id/actionCreateEssay" />
+    </fragment>
     <fragment
         android:id="@+id/actionCreateEssay"
-        android:name="com.example.scoreMyEssay.ui.main.fragment.createOrder.CreateEssayFragment"
+        android:name="com.example.scoremyessay.ui.main.fragment.createOrder.CreateEssayFragment"
         android:label="Thêm bài viết"
-        tools:layout="@layout/fragment_create_essay_option" >
+        tools:layout="@layout/fragment_create_essay_option">
         <action
             android:id="@+id/action_actionCreateEssay_to_enterEssay"
             app:destination="@id/actionEnterEssay" />
+        <action
+            android:id="@+id/action_actionCreateEssay_to_addImageFragment"
+            app:destination="@id/addImageFragment" />
+        <action
+            android:id="@+id/action_actionCreateEssay_to_createOptions"
+            app:destination="@id/createOptions" />
     </fragment>
-    <fragment
-        android:id="@+id/actionMe"
-        android:name="com.example.scoreMyEssay.ui.fragments.MeFragment"
-        android:label="Hồ sơ" />
+
     <fragment
         android:id="@+id/actionInstruction"
-        android:name="com.example.scoreMyEssay.ui.fragments.InstructionFragment"
+         android:name="com.example.scoremyessay.ui.fragments.InstructionFragment"
         android:label="Hướng dẫn"
         tools:layout="@layout/fragment_instruction" />
     <fragment
         android:id="@+id/actionSetting"
-        android:name="com.example.scoreMyEssay.ui.fragments.SettingFragment"
+        android:name="com.example.scoremyessay.ui.fragments.SettingFragment"
         android:label="Cài đặt"
         tools:layout="@layout/fragment_setting" />
     <fragment
         android:id="@+id/actionEnterEssay"
-        android:name="com.example.scoreMyEssay.ui.main.fragment.createOrder.EnterEssay"
+        android:name="com.example.scoremyessay.ui.main.fragment.createOrder.EnterEssayFragment"
         android:label="Nhập Essay"
-        tools:layout="@layout/fragment_create_essay_enter" >
+        tools:layout="@layout/fragment_create_essay_enter">
         <action
-            android:id="@+id/action_enterEssay_to_createOptions"
-            app:destination="@id/createOptions" />
+            android:id="@+id/action_actionEnterEssay_to_actionCreateEssay"
+            app:destination="@id/actionCreateEssay" />
     </fragment>
     <fragment
         android:id="@+id/createOptions"
-        android:name="com.example.scoreMyEssay.ui.main.fragment.createOrder.InitialOptionsFragment"
+        android:name="com.example.scoremyessay.ui.main.fragment.createOrder.InitialOptionsFragment"
         android:label="fragment_create_order_initial"
-        tools:layout="@layout/fragment_create_order_initial" />
+        tools:layout="@layout/fragment_create_order_initial">
+        <action
+            android:id="@+id/action_createOptions_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionMe"
+        android:name="com.example.scoremyessay.ui.main.fragment.me.MeFragment"
+        android:label="Hồ sơ của tôi"
+        tools:layout="@layout/fragment_me">
+        <action
+            android:id="@+id/action_actionMe_to_actionCreateEssay"
+            app:destination="@id/actionCreateEssay" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewDetailFragment"
+        android:name="com.example.scoremyessay.ui.main.fragment.viewDetail.ViewDetailFragment"
+        android:label="Xem chi tiết"
+        tools:layout="@layout/fragment_view_detail" />
+    <fragment
+        android:id="@+id/addImageFragment"
+        android:name="com.example.scoremyessay.ui.main.fragment.createOrder.AddImageFragment"
+        android:label="Thêm ảnh"
+        tools:layout="@layout/fragment_add_image" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.scoremyessay.ui.main.fragment.createOrder.PaymentFragment"
+        android:label="Thanh toán"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_actionHome"
+            app:destination="@id/actionHome" />
+    </fragment>
 </navigation>

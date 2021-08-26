@@ -20,7 +20,7 @@ class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle):F
             1-> OnGoingEssayFragment()
             2-> DoneEssayFragment()
             3-> CancelEssayFragment()
-            else -> Fragment()
+            else -> throw IllegalArgumentException("Không tìm thấy fragment")
         }
     }
 }

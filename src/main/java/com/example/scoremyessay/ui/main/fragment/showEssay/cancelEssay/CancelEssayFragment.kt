@@ -10,7 +10,7 @@ import com.example.scoremyessay.data.UserPreferences
 import com.example.scoremyessay.data.model.orderAttribute.type.OrderType
 import com.example.scoremyessay.databinding.FragmentViewEssayCancelBinding
 import com.example.scoremyessay.ui.main.ActivityMain
-import com.example.scoremyessay.ui.viewModel.MainViewModel
+import com.example.scoremyessay.viewModel.MainViewModel
 import com.example.scoremyessay.ui.main.fragment.showEssay.adapter.EssayAdapter
 import com.example.scoremyessay.utils.Const
 import com.google.gson.Gson

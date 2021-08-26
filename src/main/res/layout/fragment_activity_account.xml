@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.fragment.me.fragment.ActivityAccountFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp">
+
+        <TableLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TableRow>
+                <TextView
+                    android:layout_weight="2"
+                    android:text="Tổng số bài đăng :"
+                    style="@style/customTextView"/>
+                <TextView
+                    android:id="@+id/txtTotal_orders"
+                    android:layout_weight="1"
+                    style="@style/customTextView"
+                    android:text="19 bài"
+                    android:gravity="center"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_weight="2"
+                    style="@style/customTextView"
+                    android:text="Số bài được chấm :"
+                    />
+                <TextView
+                    android:id="@+id/txtTotalDone"
+                    android:layout_weight="1"
+                    style="@style/customTextView"
+                    android:text="4 bài"
+                    android:gravity="center"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center">
+
+                <TextView
+                    style="@style/customTextView"
+                    android:layout_weight="2"
+                    android:text="Tổng chi :" />
+
+                <TextView
+                    android:id="@+id/txtTotalPayment"
+                    style="@style/customTextView"
+
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:text="6.455.000 VNĐ" />
+            </TableRow>
+
+            <TableRow android:gravity="center_vertical">
+                <TextView
+                    android:layout_weight="1"
+                    style="@style/customTextView"
+                    android:text="Trung bình đăng bài theo tháng :"
+                    />
+                <TextView
+                    android:id="@+id/txtMonthlyOrder"
+                    android:layout_weight="1"
+                    style="@style/customTextView"
+                    android:text="4 bài"
+                    android:gravity="center"
+                    />
+            </TableRow>
+
+            <TableRow android:weightSum="2">
+                <TextView
+                    android:layout_weight="1"
+                    style="@style/customTextView"
+                    android:text="Tổng chi trung bình theo tháng :"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/txtMonthlyPayment"
+                    android:layout_weight="1"
+                    style="@style/customTextView"
+                    android:text="369000"
+                    android:gravity="right"
+                    />
+            </TableRow>
+
+            <TableRow android:weightSum="2">
+                <TextView
+                    android:layout_weight="1"
+                    style="@style/customTextView"
+                    android:text="Tổng chi so với tháng trước :"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/txtGross"
+                    android:layout_weight="1"
+                    style="@style/customTextView"
+                    android:text="27.2 %"
+                    android:gravity="center"
+                    />
+            </TableRow>
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

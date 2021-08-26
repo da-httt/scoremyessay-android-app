@@ -43,6 +43,7 @@ class ActivityLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val userPreferences = UserPreferences(this)
 
+        //
         userPreferences.accessToken.asLiveData().observe(this, Observer {
             if (it != null)
             {
@@ -57,15 +58,11 @@ class ActivityLogin : AppCompatActivity() {
         setContentView(binding.root)
 
         // kiểm tra đã lữu token
-
-
 //        isFirstInstallApp()
 
 //      show login fragment
         showFirstFragment()
 //      setUpTabs()
-
-
     }
 //    private fun isFirstInstallApp()
 //    {
